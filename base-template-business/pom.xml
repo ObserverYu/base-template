@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>base-template-all</artifactId>
+        <groupId>org.chen</groupId>
+        <version>0.0.1</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>base-template-business</artifactId>
+
+
+    <dependencies>
+
+        <dependency>
+            <groupId>org.chen</groupId>
+            <artifactId>base-template-common</artifactId>
+            <version>0.0.1</version>
+        </dependency>
+
+
+<!-- ===============================================   根据项目情况可选  =================================================-->
+
+        <!-- 分布式定时任务 -->
+        <dependency>
+            <groupId>com.xuxueli</groupId>
+            <artifactId>xxl-job-core</artifactId>
+            <version>2.2.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+
+        <!-- druid连接池-非自动配置 -->
+        <!--<dependency>-->
+        <!--<groupId>com.alibaba</groupId>-->
+        <!--<artifactId>druid</artifactId>-->
+        <!--<version>1.1.23</version>-->
+        <!--</dependency>-->
+
+        <!-- druid连接池-自动配置 -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid-spring-boot-starter</artifactId>
+            <version>1.1.22</version>
+        </dependency>
+
+        <!-- mybatis-plus -->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
+            <version>3.3.2</version>
+        </dependency>
+
+        <!-- 动态数据源自动配置  特殊情况下可以自己用aop实现 -->
+        <!--<dependency>-->
+        <!--<groupId>com.baomidou</groupId>-->
+        <!--<artifactId>dynamic-datasource-spring-boot-starter</artifactId>-->
+        <!--<version>3.2.0</version>-->
+        <!--</dependency>-->
+
+        <!-- 关系型数据库分片 -->
+        <dependency>
+            <groupId>org.apache.shardingsphere</groupId>
+            <artifactId>sharding-jdbc-core</artifactId>
+            <version>4.1.1</version>
+        </dependency>
+
+        <!-- leaf所需 -->
+        <dependency>
+            <groupId>org.perf4j</groupId>
+            <artifactId>perf4j</artifactId>
+            <version>0.9.16</version>
+        </dependency>
+
+        <!-- zookeeper客户端 leaf所需 -->
+        <dependency>
+            <groupId>org.apache.curator</groupId>
+            <artifactId>curator-recipes</artifactId>
+            <exclusions>
+                <exclusion>
+                    <artifactId>log4j</artifactId>
+                    <groupId>log4j</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <!-- redis -->
+        <dependency>
+            <groupId>org.redisson</groupId>
+            <artifactId>redisson</artifactId>
+            <version>3.13.2</version>
+        </dependency>
+
+        <!-- pdf修改所需 -->
+        <dependency>
+            <groupId>org.freemarker</groupId>
+            <artifactId>freemarker</artifactId>
+        </dependency>
+
+        <!-- pdf -->
+        <dependency>
+            <groupId>org.apache.pdfbox</groupId>
+            <artifactId>pdfbox</artifactId>
+        </dependency>
+
+        <!-- pdf -->
+        <dependency>
+            <groupId>com.itextpdf</groupId>
+            <artifactId>itextpdf</artifactId>
+        </dependency>
+
+        <!-- 国密 -->
+        <dependency>
+            <groupId>org.bouncycastle</groupId>
+            <artifactId>bcprov-jdk15on</artifactId>
+        </dependency>
+
+        <!-- spc全家桶  feign(rpc调用) -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+        </dependency>
+
+        <!-- spc全家桶  配置中心 -->
+        <!--<dependency>-->
+            <!--<groupId>com.alibaba.cloud</groupId>-->
+            <!--<artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>-->
+        <!--</dependency>-->
+
+    </dependencies>
+
+
+</project>

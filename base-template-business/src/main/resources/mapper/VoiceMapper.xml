@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.chen.dao.VoiceMapper">
+ 
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="org.chen.domain.entity.Voice">
+        <id column="voice_id" property="voiceId"/>
+        <result column="name" property="name"/>
+        <result column="url" property="url"/>
+        <result column="content_desc" property="contentDesc"/>
+        <result column="gmt_create" property="gmtCreate"/>
+        <result column="gmt_modified" property="gmtModified"/>
+        <result column="remark" property="remark"/>
+    </resultMap>
+ 
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+            t.voice_id,
+            t.name,
+            t.url,
+            t.content_desc,
+            t.gmt_create,
+            t.gmt_modified,
+            t.remark,
+    </sql>
+</mapper>
